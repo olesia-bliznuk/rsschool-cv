@@ -2,9 +2,9 @@
 # Olesya Blizniuk
 
 ## Contacts
--Phone: +7 705 4187877
--E-mail: olesyablizniuk@gmail.com
--Telegram: @olesiabliznuk
+- Phone: +7 705 4187877
+- E-mail: olesyablizniuk@gmail.com
+- Telegram: @olesiabliznuk
 
 ## Summary
 - I want to learn Front-End Development

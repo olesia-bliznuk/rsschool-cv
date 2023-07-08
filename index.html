@@ -6,40 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV</title>
-    <link rel="stylesheet" href="/rsschool-cv/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header class="header">
         <nav class="nav">
-            <a class="nav__link" href="#contacts">Contacts</a>
-            <a class="nav__link" href="#summary">Summary</a>
-            <a class="nav__link" href="#skills">Skills</a>
-            <a class="nav__link" href="#code">Code examples</a>
-            <a class="nav__link" href="#experience">Experience</a>
-            <a class="nav__link" href="#education">Education</a>
-            <a class="nav__link" href="#languages">Languages</a>
+            <ul>
+                <li> <a class="nav__link" href="#contacts">Contacts</a></li>
+                <li> <a class="nav__link" href="#summary">Summary</a></li>
+                <li> <a class="nav__link" href="#skills">Skills</a></li>
+                <li> <a class="nav__link" href="#code">Code examples</a></li>
+                <li> <a class="nav__link" href="#experience">Experience</a></li>
+                <li> <a class="nav__link" href="#projects">Projects</a></li>
+                <li> <a class="nav__link" href="#education">Education</a></li>
+                <li> <a class="nav__link" href="#languages">Languages</a></li>
+            </ul>
         </nav>
-        <img src="/rsschool-cv/1594e3d231fed5eebf50de85c9ac6bd9.jpeg" alt="cat">
-        <h1>Olesya Blizniuk</h1>
+        <img src="cat.jpeg" alt="cat">
+        <h1>Olesia Bliznuk</h1>
     </header>
     <main class="container-center">
         <section id="contacts">
             <h2>Contacts</h2>
-            <p>Phone: +7 705 4187877</p>
-            <p>E-mail: olesyablizniuk@gmail.com</p>
-            <p>Telegram: @olesiabliznuk</p>
+            <ul>
+                <li>Phone: +7 705 4187877</li>
+                <li>E-mail: olesyablizniuk@gmail.com</li>
+                <li>Telegram: @olesiabliznuk</li>
+            </ul>
         </section>
         <section id="summary">
             <h2>Summary</h2>
-            <p>I want to learn Front-End Development</p>
+            <p>I like programming and now I want to learn Front-End Development and find job</p>
         </section>
         <section id="skills">
             <h2>Skills</h2>
             <ul>
                 <li>HTML5, CSS3</li>
                 <li>JavaScript</li>
-                <li>Git, GitHub</li>
+                <li>TypeScript</li>
                 <li>C#</li>
                 <li>ABAP</li>
             </ul>
@@ -47,7 +52,29 @@
         <section id="code">
             <h2>Code</h2>
             <code>
-                a + b = b + a;
+                const fs = require('fs');  <br>
+                let array = fs.readFileSync('input.txt').toString().trim().split(""); <br>
+                let result; <br>
+                let stack = []; <br>
+                for (let i = 0; i &lt; array.length; i++) <br>
+                {  <br>
+                    if ( stack.length == 0 )  <br>
+                    {  <br>
+                        stack.push(array[i]); <br>
+                    } <br>
+                    else <br>
+                    { <br>
+                        if ((array[i] == ')' && stack[stack.length-1] == '(') || (array[i] == ']' && stack[stack.length-1] == '[') || (array[i] == '}' && stack[stack.length-1] == '{'))  <br>
+                            stack.pop();   <br>
+                        else <br>
+                            stack.push(array[i]);   <br>
+                    } <br>
+                } <br>
+                    if ( stack.length == 0 ) <br>
+                        {result = 'yes'} <br>
+                    else <br>
+                        {result = 'no'} <br>
+                fs.writeFileSync('output.txt', result); <br>
             </code>
         </section>
         <section id="experience">
@@ -55,6 +82,14 @@
             <ul>
                 <li>I worked as a ABAP-developer for 2 years</li>
                 <li>Did some educational projects at the university</li>
+            </ul>
+        </section>
+        <section id="projects">
+            <h2>My projects</h2>
+            <ul class="projects">
+                <li><a href="#">English for kids</a></li>
+                <li><a href="#">Shelter</a></li>
+                <li><a href="#">Bookshop</a></li>
             </ul>
         </section>
         <section id="education">
@@ -71,9 +106,12 @@
         </section>
     </main>
     <footer class="footer">
-        <p>2022</p>
-        <a href="https://github.com/">My GitHub</a>
-        <a href="https://rs.school/js/"><img src="/rsschool-cv/images.png" alt="rs-school"></a>
+        <p>2023</p>
+        <a href="https://github.com/" class="git">
+            <img src="git-logo.png" alt="gitHub">
+        </a>
+        <p>@olesiabliznuk</p>
+        <a href="https://rs.school/js/"><img src="rs-school.svg" alt="rs-school"></a>
     </footer>
 </body>
 

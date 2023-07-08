@@ -1,16 +1,27 @@
-body{
-    margin:0;
+body {
+    margin: 0;
     padding: 0;
     font-family: 'Courier New', Courier, monospace;
 }
 
-.header{
-    background-color: black;
+.header {
+    background-color: rgb(146, 138, 50);
     color: white;
     text-align: center;
     padding: 20px;
+    font-size: 18px;
+    font-weight: 700;
 }
 
+.nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav ul li {
+    list-style-type: none;
+    text-decoration: none;
+}
 
 .nav__link {
     text-decoration: none;
@@ -18,11 +29,11 @@ body{
     padding: 10px;
 }
 
-.nav__link:hover{
-    color: yellow;
+.nav__link:hover {
+    color: rgba(255, 255, 0, 0.384);
 }
 
-.header img{
+.header img {
     margin: 15px;
     border-radius: 50%;
 }
@@ -36,35 +47,97 @@ body{
     background-color: rgb(250, 249, 249);
 }
 
-section h2{
+section h2 {
     font-size: 30px;
-    font-weight: 700px;
+    font-weight: 700;
 }
 
-.footer{
-    background-color: black;
+.projects a {
+    text-decoration: none;
+    color: black;
+}
+
+.projects a:hover {
+    color: rgba(112, 102, 24, 0.249);
+}
+
+code {
+    font-size: 14px;
+}
+
+
+
+.footer {
+    background-color: rgb(146, 138, 50);
+    ;
     color: white;
+    font-size: 20px;
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     display: flex;
     justify-content: space-between;
 }
 
-.footer a{
+.footer a {
     text-decoration: none;
     color: white;
-    margin-top: 10px;
 }
 
-.footer a:hover{
-    color: yellow;
+.footer a:hover {
+    color: #031016;
 }
 
-.footer img{
+.footer img {
     height: 40px;
 }
 
-.footer p{
+.footer p {
     margin-left: 25px;
     margin-top: 10px;
+}
+
+.git {
+    display: flex;
+}
+
+.git p {
+    line-height: 20px;
+}
+
+@media (max-width: 900px) {
+    .nav ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .header img {
+        height: 200px;
+    }
+
+    .nav ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    code {
+        font-size: 9px;
+    }
+
+    .footer {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+
+    .git img {
+        display: none;
+    }
+
+    .footer img {
+        height: 30px;
+    }
 }
